@@ -1,0 +1,364 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "EchoFactyt — Bright, Modern Content Website Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Design and apply vibrant, youthful visual theme with bold gradients, modern typography, and responsive mobile-first layout",
+      "acceptanceCriteria": [
+        "Site renders cleanly on mobile (320px+), tablet, and desktop",
+        "Consistent color palette and typography used throughout all sections",
+        "All interactive elements have visible hover/focus states"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Add custom color palette with coral-to-yellow and teal-to-lime gradients, remove blue/purple colors. Define category badge colors (technology, school, health, entertainment, daily life). Add custom spacing and border radius utilities for card-based layouts."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global typography styles with large bold headings using modern sans-serif fonts. Add smooth hover transition classes. Include mobile-first responsive base styles and card component utility classes with shadows and hover effects."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build full-width hero banner with tagline, subtitle, three CTAs, gradient background, and generated hero illustration",
+      "acceptanceCriteria": [
+        "Hero section is visible on page load with all three CTA buttons",
+        "CTA buttons scroll to or link to relevant sections on the page",
+        "Hero is fully responsive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create hero banner component with full-width layout, tagline 'Discover Facts That Actually Matter', subtitle text, and three CTA buttons ('Learn More', 'Try Now', 'Watch Video'). Use the generated hero illustration from frontend/public/assets/generated/hero-banner.dim_1400x600.png as background. Apply bold gradient overlay. Implement scroll-to-section behavior for CTAs using smooth scroll. Ensure responsive sizing for mobile, tablet, and desktop."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render HeroSection component at the top of the main content area. Ensure proper layout integration with sections below."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create Trending Facts section with 6+ colorful fact cards showing category badges, facts, icons, and Learn More buttons",
+      "acceptanceCriteria": [
+        "At least 6 fact cards visible in a responsive grid",
+        "Each card has a category badge with distinct color per category",
+        "'Learn More' button is present on every card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FactCard.tsx",
+          "operation": "create",
+          "description": "Create reusable fact card component accepting category, fact text, and category icon as props. Display colored category badge at top using category-specific colors from theme. Show 2-3 sentence fact text in readable body typography. Include topic icon from frontend/public/assets/generated/category-icons.dim_512x512.png. Add 'Learn More' button with hover effect. Make card responsive with proper spacing and shadows."
+        },
+        {
+          "path": "frontend/src/components/TrendingFactsSection.tsx",
+          "operation": "create",
+          "description": "Create section component displaying at least 6 FactCard components in a responsive grid (2 columns on mobile, 3-4 on tablet/desktop). Include section heading 'Trending Facts'. Populate with sample facts spanning technology, school, health, entertainment, and daily life categories. Assign id attribute for scroll-to navigation from hero CTAs."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render TrendingFactsSection component below HeroSection in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add Top 10 Lists section with 3+ sample lists in numbered card or accordion layout with Try Now CTAs",
+      "acceptanceCriteria": [
+        "At least 3 Top 10 lists are displayed",
+        "Each list item is numbered and styled consistently",
+        "'Try Now' button is present on each list card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Top10ListCard.tsx",
+          "operation": "create",
+          "description": "Create card component for Top 10 lists. Accept title, description, and array of 10 list items as props. Render numbered list with consistent styling (bold numbers, clear item text). Include 'Try Now' CTA button. Style card with colorful accents and hover effects."
+        },
+        {
+          "path": "frontend/src/components/Top10Section.tsx",
+          "operation": "create",
+          "description": "Create section displaying at least 3 Top10ListCard components: 'Top 10 Study Hacks', 'Top 10 Free Apps for Students', 'Top 10 Healthy Snacks'. Use responsive grid layout. Include section heading. Assign id for navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Top10Section component in the main content flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create Step-by-Step Guides section with 3+ guides showing numbered steps and Learn More CTAs",
+      "acceptanceCriteria": [
+        "At least 3 guides are shown with numbered step lists",
+        "Guide cards are responsive and readable on mobile",
+        "'Learn More' CTA is present on each guide"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GuideCard.tsx",
+          "operation": "create",
+          "description": "Create guide card component accepting title and array of numbered steps. Display numbered step list with clear typography. Include 'Learn More' button. Apply card styling with category-based coloring and responsive layout."
+        },
+        {
+          "path": "frontend/src/components/GuidesSection.tsx",
+          "operation": "create",
+          "description": "Create section with at least 3 GuideCard components: 'How to Build a Study Schedule', 'How to Stay Healthy on a Budget', and one additional guide. Use responsive grid layout. Include section heading 'Step-by-Step Guides'. Assign id for navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render GuidesSection component in the main content area."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Videos section with YouTube iframe embeds in grid/carousel layout with Watch Video labels",
+      "acceptanceCriteria": [
+        "At least 4 YouTube iframes are embedded and playable",
+        "Video section has a distinct visual layout (grid or carousel)",
+        "'Watch Video' label or button is visible on each video card",
+        "Video embeds are responsive and not cropped on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VideoCard.tsx",
+          "operation": "create",
+          "description": "Create video card component wrapping YouTube iframe embed. Accept video title and YouTube embed URL as props. Include responsive iframe wrapper with proper aspect ratio (16:9). Display video title above or below iframe. Add 'Watch Video' label/button. Style with card layout matching site theme."
+        },
+        {
+          "path": "frontend/src/components/VideosSection.tsx",
+          "operation": "create",
+          "description": "Create section displaying at least 4 VideoCard components with real YouTube embed URLs (popular short educational videos). Use responsive grid layout (1 column mobile, 2-3 columns desktop). Include section heading 'Videos'. Assign id for navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render VideosSection component in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add interactive Quiz module with multi-step questions, state tracking, and results screen",
+      "acceptanceCriteria": [
+        "Quiz displays at least 5 questions with 3–4 answer choices each",
+        "User can progress through questions and reach a result screen",
+        "Result screen shows a summary or score",
+        "Quiz is fully functional without a backend"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Quiz.tsx",
+          "operation": "create",
+          "description": "Create interactive quiz component managing state for current question index, user answers, and quiz completion. Display one multiple-choice question at a time with 3-4 answer options. Track selected answers in React state. Include Next/Previous navigation buttons. Calculate and display results on completion screen showing personality type or score. Sample quiz: 'Which Study Style Are You?' with at least 5 questions. Use colorful styling with progress indicator."
+        },
+        {
+          "path": "frontend/src/components/QuizSection.tsx",
+          "operation": "create",
+          "description": "Create section wrapper for Quiz component with section heading 'Take a Quiz'. Assign id for navigation. Apply consistent section styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render QuizSection component in the main content flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Include 2 interactive calculators: GPA Calculator and Screen Time Tracker with React state computation",
+      "acceptanceCriteria": [
+        "GPA calculator accepts at least 3 course inputs and displays calculated GPA",
+        "Screen time calculator accepts hours input and shows a wellness assessment",
+        "Both calculators show results immediately on input change or button click"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GPACalculator.tsx",
+          "operation": "create",
+          "description": "Create GPA calculator component with form accepting at least 3 course entries (course name, grade, credit hours). Use React state to store course data and computed GPA. Calculate GPA in real-time or on button click using standard GPA formula. Display calculated GPA prominently. Include input validation and clear styling with colorful accents."
+        },
+        {
+          "path": "frontend/src/components/ScreenTimeCalculator.tsx",
+          "operation": "create",
+          "description": "Create screen time calculator component with input field for daily hours of screen time. Use React state for input and wellness assessment result. Calculate wellness score/message based on hours (e.g., healthy <2h, moderate 2-4h, high >4h). Display assessment immediately on input or calculate button. Style with engaging colors and feedback messages."
+        },
+        {
+          "path": "frontend/src/components/CalculatorsSection.tsx",
+          "operation": "create",
+          "description": "Create section displaying both GPACalculator and ScreenTimeCalculator components side-by-side or stacked responsively. Include section heading 'Calculators'. Assign id for navigation. Apply consistent section layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render CalculatorsSection component in the main content area."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create Free Downloads section with 4+ freebie cards showing Download Free buttons",
+      "acceptanceCriteria": [
+        "At least 4 freebie cards are displayed in a grid",
+        "Each card has title, description, and a download button",
+        "Cards are visually distinct and appealing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FreebieCard.tsx",
+          "operation": "create",
+          "description": "Create freebie card component accepting title, description, and download link as props. Display card with colorful decorative background using frontend/public/assets/generated/freebies-bg.dim_800x400.png or gradient. Include 'Download Free' button linking to '#' or showing a static notice. Style card with engaging colors, icons, and hover effects."
+        },
+        {
+          "path": "frontend/src/components/DownloadsSection.tsx",
+          "operation": "create",
+          "description": "Create section displaying at least 4 FreebieCard components: 'Study Planner PDF', 'Healthy Meal Prep Checklist', 'Daily Habit Tracker', 'Tech Cheat Sheet'. Use responsive grid layout. Include section heading 'Free Downloads'. Assign id for navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render DownloadsSection component in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add social media share buttons (Twitter/X, Facebook, WhatsApp, Copy Link) on fact cards, guide cards, and quiz results",
+      "acceptanceCriteria": [
+        "Share buttons are visible on fact cards, guide cards, and quiz results",
+        "Twitter/X and Facebook buttons open share URLs in a new tab",
+        "WhatsApp button opens a WhatsApp share link",
+        "Copy Link button copies the URL and shows a brief 'Copied!' confirmation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ShareButtons.tsx",
+          "operation": "create",
+          "description": "Create reusable share buttons component accepting title and optional URL as props. Include four buttons: Twitter/X (opens pre-filled tweet with title and URL in new tab), Facebook (opens Facebook share dialog with URL in new tab), WhatsApp (opens whatsapp.com share link with title and URL), and Copy Link (copies current or provided URL to clipboard and shows 'Copied!' toast for 2 seconds). Style buttons with colorful icons and consistent spacing. Use Web Share API URLs without authentication."
+        },
+        {
+          "path": "frontend/src/components/FactCard.tsx",
+          "operation": "modify",
+          "description": "Import and render ShareButtons component at the bottom of each FactCard. Pass fact title and current page URL."
+        },
+        {
+          "path": "frontend/src/components/GuideCard.tsx",
+          "operation": "modify",
+          "description": "Import and render ShareButtons component at the bottom of each GuideCard. Pass guide title and current page URL."
+        },
+        {
+          "path": "frontend/src/components/Quiz.tsx",
+          "operation": "modify",
+          "description": "Import and render ShareButtons component on the quiz results screen. Pass quiz result text and current page URL."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Build Popular Posts sidebar showing 5 posts ranked by view count, with click-to-increment functionality",
+      "acceptanceCriteria": [
+        "Popular posts are fetched from the backend and displayed sorted by view count",
+        "Clicking a post increments its view count and re-renders the updated count",
+        "At least 5 seed posts are pre-loaded in the backend"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/usePopularPosts.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch popular posts from backend using getTopPosts method. Return posts sorted by view count with title, category, and view count. Enable query when actor is available."
+        },
+        {
+          "path": "frontend/src/hooks/useViewPost.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook to increment post view count by calling backend viewPost method with post title. Invalidate popular posts query on success to trigger re-fetch."
+        },
+        {
+          "path": "frontend/src/components/PopularPostsSection.tsx",
+          "operation": "create",
+          "description": "Create popular posts section component using usePopularPosts hook to fetch and display at least 5 posts. Show each post as a clickable card with title, category badge, and view count. On click, call useViewPost mutation to increment count and re-render. Display loading and error states. Style as sidebar or dedicated section with colorful badges and hover effects."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render PopularPostsSection component in a sidebar layout or as a section in the main content area."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add New Updates section displaying 4 most recent content items with New badge from backend",
+      "acceptanceCriteria": [
+        "Backend stores content items with creation timestamps",
+        "Frontend displays the 4 most recent items with a 'New' badge",
+        "Section updates when new content is added"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useRecentUpdates.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch recent updates from backend using getRecentUpdates method. Return array of content items with text and timestamp. Enable query when actor is available."
+        },
+        {
+          "path": "frontend/src/components/NewUpdatesSection.tsx",
+          "operation": "create",
+          "description": "Create section component using useRecentUpdates hook to fetch and display the 4 most recent content items. Show each item as a highlighted card with 'New' badge, content text, and formatted timestamp. Display loading and error states. Use colorful styling with prominent New badge. Assign section id for navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render NewUpdatesSection component prominently near the top of the page (after hero, before or after trending facts)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Implement category filter navigation with tabs filtering Trending Facts, Guides, and Top 10 lists",
+      "acceptanceCriteria": [
+        "Category filter bar is visible and sticky or near the top of content sections",
+        "Selecting a category filters displayed cards correctly",
+        "'All' tab shows all content",
+        "Active category tab is visually highlighted"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CategoryFilter.tsx",
+          "operation": "create",
+          "description": "Create category filter component displaying tabs or pill buttons for: All, Technology, School, Health, Entertainment, Daily Life. Use React state to track active category. Apply active styling (highlighted background/border) to selected tab. Emit category change event or accept callback prop to notify parent component. Style with colorful accents matching category badge colors. Make sticky on scroll."
+        },
+        {
+          "path": "frontend/src/components/TrendingFactsSection.tsx",
+          "operation": "modify",
+          "description": "Accept selectedCategory prop and filter displayed FactCard components by category. Show all cards when category is 'All'."
+        },
+        {
+          "path": "frontend/src/components/GuidesSection.tsx",
+          "operation": "modify",
+          "description": "Accept selectedCategory prop and filter displayed GuideCard components by category. Show all guides when category is 'All'."
+        },
+        {
+          "path": "frontend/src/components/Top10Section.tsx",
+          "operation": "modify",
+          "description": "Accept selectedCategory prop and filter displayed Top10ListCard components by category. Show all lists when category is 'All'."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import CategoryFilter component. Add React state for selected category. Render CategoryFilter near the top of content sections (after hero/updates, before trending facts). Pass selectedCategory state to TrendingFactsSection, GuidesSection, and Top10Section components."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "EchoFactyt — a bright, modern, mobile-friendly content website for teens and young adults focused on short facts, life hacks, and useful tips covering technology, school, health, entertainment, and daily life.",
+  "architectural_notes": [
+    "Design must be clean, colorful, SEO-friendly, fast-loading, and fully mobile-responsive with bold headings and modern fonts",
+    "Email subscription form is UI-only (no actual email sending); downloadable freebies use placeholder links"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Vibrant hero illustration with colorful abstract shapes, lightning bolt, lightbulb, and stars on a coral-to-yellow gradient background, suitable for a youth facts website (hero-banner.dim_1400x600.png)\n- Fun flat-style icons set: small icons for technology (chip), school (book), health (heart), entertainment (star), daily life (sun) on transparent backgrounds (category-icons.dim_512x512.png)\n- Bright decorative freebie download card background with confetti and ribbon elements (freebies-bg.dim_800x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-design-and-apply-a-vibrant-youthful-visual-theme-across-the-entire-site-bold-gradient-accents-e-g-coral-to-yellow-or-teal-to-lime-modern-sans-serif-typography-large-bold-headings-readable-body-text-colorful-category-badges-card-based-layout-smooth-hover-effects-and-fully-responsive-mobile-first-layout-no-blue-purple",
+      "title": "Design and apply a vibrant, youthful visual theme across the entire site: bold gradient accents (e.g., coral-to-yellow or teal-to-lime), modern sans-serif typography (large bold headings, readable body text), colorful category badges, card-based layout, smooth hover effects, and fully responsive mobile-first layout. No blue/purple.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-width-hero-banner-at-the-top-of-the-homepage-with-a-catchy-tagline-e-g-discover-facts-that-actually-matter-a-short-subtitle-and-three-cta-buttons-learn-more-try-now-and-watch-video-the-banner-should-use-a-bold-gradient-background-and-a-generated-hero-illustration",
+      "title": "Build a full-width hero banner at the top of the homepage with a catchy tagline (e.g., 'Discover Facts That Actually Matter'), a short subtitle, and three CTA buttons: 'Learn More', 'Try Now', and 'Watch Video'. The banner should use a bold gradient background and a generated hero illustration.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-trending-facts-section-displaying-at-least-6-colorful-fact-cards-each-card-shows-a-category-badge-a-short-interesting-fact-2-3-sentences-a-topic-icon-and-a-learn-more-button-facts-should-span-categories-technology-school-health-entertainment-and-daily-life",
+      "title": "Create a 'Trending Facts' section displaying at least 6 colorful fact cards. Each card shows a category badge, a short interesting fact (2–3 sentences), a topic icon, and a 'Learn More' button. Facts should span categories: technology, school, health, entertainment, and daily life.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-top-10-lists-section-with-at-least-3-sample-top-10-lists-e-g-top-10-study-hacks-top-10-free-apps-for-students-top-10-healthy-snacks-each-list-is-shown-as-a-numbered-card-or-accordion-panel-with-a-title-brief-description-and-a-try-now-cta-button",
+      "title": "Add a 'Top 10 Lists' section with at least 3 sample Top 10 lists (e.g., 'Top 10 Study Hacks', 'Top 10 Free Apps for Students', 'Top 10 Healthy Snacks'). Each list is shown as a numbered card or accordion panel with a title, brief description, and a 'Try Now' CTA button.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-step-by-step-guides-section-with-at-least-3-sample-guides-e-g-how-to-build-a-study-schedule-how-to-stay-healthy-on-a-budget-each-guide-is-displayed-as-a-card-with-a-title-numbered-steps-and-a-learn-more-button",
+      "title": "Create a 'Step-by-Step Guides' section with at least 3 sample guides (e.g., 'How to Build a Study Schedule', 'How to Stay Healthy on a Budget'). Each guide is displayed as a card with a title, numbered steps, and a 'Learn More' button.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-videos-section-that-embeds-youtube-shorts-and-videos-use-iframe-embeds-with-a-visually-appealing-grid-or-carousel-layout-include-at-least-4-embedded-video-placeholders-using-real-youtube-embed-urls-e-g-popular-echofactyt-style-short-educational-videos-each-video-card-should-have-a-title-and-a-watch-video-button-label",
+      "title": "Build a 'Videos' section that embeds YouTube Shorts and videos. Use iframe embeds with a visually appealing grid or carousel layout. Include at least 4 embedded video placeholders using real YouTube embed URLs (e.g., popular EchoFactyt-style short educational videos). Each video card should have a title and a 'Watch Video' button/label.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-interactive-quiz-module-with-at-least-one-sample-quiz-e-g-which-study-style-are-you-the-quiz-should-present-multiple-choice-questions-one-at-a-time-track-the-user-s-answers-in-react-state-and-display-a-results-screen-at-the-end-with-a-score-or-personality-result",
+      "title": "Add an interactive Quiz module with at least one sample quiz (e.g., 'Which Study Style Are You?'). The quiz should present multiple-choice questions one at a time, track the user's answers in React state, and display a results screen at the end with a score or personality result.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-at-least-2-interactive-calculators-in-a-calculators-section-1-a-gpa-calculator-that-takes-course-grades-and-credit-hours-and-outputs-a-gpa-and-2-a-screen-time-tracker-calculator-that-estimates-daily-digital-wellness-based-on-hours-of-screen-time-input-both-calculators-must-use-react-state-for-all-computation",
+      "title": "Include at least 2 interactive calculators in a 'Calculators' section: (1) a GPA Calculator that takes course grades and credit hours and outputs a GPA, and (2) a Screen Time Tracker calculator that estimates daily digital wellness based on hours of screen time input. Both calculators must use React state for all computation.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-free-downloads-section-with-at-least-4-freebie-cards-e-g-study-planner-pdf-healthy-meal-prep-checklist-daily-habit-tracker-tech-cheat-sheet-each-card-shows-a-title-description-and-a-download-free-button-buttons-link-to-placeholder-or-a-static-notice-since-file-hosting-is-not-available",
+      "title": "Create a 'Free Downloads' section with at least 4 freebie cards (e.g., 'Study Planner PDF', 'Healthy Meal Prep Checklist', 'Daily Habit Tracker', 'Tech Cheat Sheet'). Each card shows a title, description, and a 'Download Free' button. Buttons link to placeholder '#' or a static notice since file hosting is not available.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-social-media-share-buttons-twitter-x-facebook-whatsapp-and-copy-link-on-each-fact-card-guide-card-and-at-the-bottom-of-the-quiz-results-screen-clicking-twitter-x-and-facebook-should-open-a-pre-filled-share-dialog-using-the-page-url-and-a-short-share-message-whatsapp-should-open-a-whatsapp-com-share-link-copy-link-copies-the-current-url-to-clipboard",
+      "title": "Add social media share buttons (Twitter/X, Facebook, WhatsApp, and Copy Link) on each fact card, guide card, and at the bottom of the quiz results screen. Clicking Twitter/X and Facebook should open a pre-filled share dialog using the page URL and a short share message. WhatsApp should open a whatsapp.com share link. Copy Link copies the current URL to clipboard.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-popular-posts-sidebar-or-section-showing-at-least-5-posts-ranked-by-a-view-count-stored-in-the-motoko-backend-each-post-has-a-title-category-and-view-count-clicking-a-post-increments-its-view-count-via-a-backend-call",
+      "title": "Build a 'Popular Posts' sidebar or section showing at least 5 posts ranked by a view count stored in the Motoko backend. Each post has a title, category, and view count. Clicking a post increments its view count via a backend call.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-updates-section-on-the-homepage-displaying-the-most-recently-added-facts-or-tips-the-backend-should-store-content-items-with-a-timestamp-the-frontend-fetches-and-displays-the-4-most-recent-items-in-a-highlighted-new-badge-card-layout",
+      "title": "Add a 'New Updates' section on the homepage displaying the most recently added facts or tips. The backend should store content items with a timestamp. The frontend fetches and displays the 4 most recent items in a highlighted 'New' badge card layout.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-topic-category-filter-navigation-bar-with-tabs-or-pill-buttons-for-all-technology-school-health-entertainment-daily-life-clicking-a-category-filters-the-trending-facts-guides-and-top-10-lists-sections-to-show-only-items-matching-that-category-filter-state-is-managed-in-react",
+      "title": "Implement a topic category filter/navigation bar with tabs or pill buttons for: All, Technology, School, Health, Entertainment, Daily Life. Clicking a category filters the Trending Facts, Guides, and Top 10 lists sections to show only items matching that category. Filter state is managed in React.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero banner with tagline and CTA buttons (Learn More, Try Now, Watch Video)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Trending facts section with colorful cards",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Top 10 lists section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Step-by-step guides section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Category sections: Technology, School, Health, Entertainment, Daily Life",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Interactive quiz module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Useful calculators (e.g., GPA, sleep, screen time)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Embedded YouTube Shorts/videos from EchoFactyt channel with visually appealing video section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Social media share buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Email subscription form UI",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Downloadable freebies section with download buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Popular posts and new updates sections",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "EchoFactyt",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,340 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T15:39:17.772Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 13,
+    "implemented": 13,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Design and apply a vibrant, youthful visual theme across the entire site: bold gradient accents (e.g., coral-to-yellow or teal-to-lime), modern sans-serif typography (large bold headings, readable body text), colorful category badges, card-based layout, smooth hover effects, and fully responsive mobile-first layout. No blue/purple.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Add social media share buttons (Twitter/X, Facebook, WhatsApp, and Copy Link) on each fact card, guide card, and at the bottom of the quiz results screen. Clicking Twitter/X and Facebook should open a pre-filled share dialog using the page URL and a short share message. WhatsApp should open a whatsapp.com share link. Copy Link copies the current URL to clipboard.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ShareButtons.tsx",
+          "frontend/src/components/FactCard.tsx",
+          "frontend/src/components/GuideCard.tsx",
+          "frontend/src/components/Quiz.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ShareButtons.tsx",
+          "frontend/src/components/FactCard.tsx",
+          "frontend/src/components/GuideCard.tsx",
+          "frontend/src/components/Quiz.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Build a 'Popular Posts' sidebar or section showing at least 5 posts ranked by a view count stored in the Motoko backend. Each post has a title, category, and view count. Clicking a post increments its view count via a backend call.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/usePopularPosts.ts",
+          "frontend/src/hooks/useViewPost.ts",
+          "frontend/src/components/PopularPostsSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PopularPostsSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Add a 'New Updates' section on the homepage displaying the most recently added facts or tips. The backend should store content items with a timestamp. The frontend fetches and displays the 4 most recent items in a highlighted 'New' badge card layout.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useRecentUpdates.ts",
+          "frontend/src/components/NewUpdatesSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/NewUpdatesSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Implement a topic category filter/navigation bar with tabs or pill buttons for: All, Technology, School, Health, Entertainment, Daily Life. Clicking a category filters the Trending Facts, Guides, and Top 10 lists sections to show only items matching that category. Filter state is managed in React.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CategoryFilter.tsx",
+          "frontend/src/components/TrendingFactsSection.tsx",
+          "frontend/src/components/GuidesSection.tsx",
+          "frontend/src/components/Top10Section.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CategoryFilter.tsx",
+          "frontend/src/components/TrendingFactsSection.tsx",
+          "frontend/src/components/GuidesSection.tsx",
+          "frontend/src/components/Top10Section.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Build a full-width hero banner at the top of the homepage with a catchy tagline (e.g., 'Discover Facts That Actually Matter'), a short subtitle, and three CTA buttons: 'Learn More', 'Try Now', and 'Watch Video'. The banner should use a bold gradient background and a generated hero illustration.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create a 'Trending Facts' section displaying at least 6 colorful fact cards. Each card shows a category badge, a short interesting fact (2–3 sentences), a topic icon, and a 'Learn More' button. Facts should span categories: technology, school, health, entertainment, and daily life.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FactCard.tsx",
+          "frontend/src/components/TrendingFactsSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FactCard.tsx",
+          "frontend/src/components/TrendingFactsSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add a 'Top 10 Lists' section with at least 3 sample Top 10 lists (e.g., 'Top 10 Study Hacks', 'Top 10 Free Apps for Students', 'Top 10 Healthy Snacks'). Each list is shown as a numbered card or accordion panel with a title, brief description, and a 'Try Now' CTA button.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Top10ListCard.tsx",
+          "frontend/src/components/Top10Section.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Top10ListCard.tsx",
+          "frontend/src/components/Top10Section.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Create a 'Step-by-Step Guides' section with at least 3 sample guides (e.g., 'How to Build a Study Schedule', 'How to Stay Healthy on a Budget'). Each guide is displayed as a card with a title, numbered steps, and a 'Learn More' button.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/GuideCard.tsx",
+          "frontend/src/components/GuidesSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/GuideCard.tsx",
+          "frontend/src/components/GuidesSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Build a 'Videos' section that embeds YouTube Shorts and videos. Use iframe embeds with a visually appealing grid or carousel layout. Include at least 4 embedded video placeholders using real YouTube embed URLs (e.g., popular EchoFactyt-style short educational videos). Each video card should have a title and a 'Watch Video' button/label.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/VideoCard.tsx",
+          "frontend/src/components/VideosSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/VideoCard.tsx",
+          "frontend/src/components/VideosSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Add an interactive Quiz module with at least one sample quiz (e.g., 'Which Study Style Are You?'). The quiz should present multiple-choice questions one at a time, track the user's answers in React state, and display a results screen at the end with a score or personality result.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Quiz.tsx",
+          "frontend/src/components/QuizSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Quiz.tsx",
+          "frontend/src/components/QuizSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Include at least 2 interactive calculators in a 'Calculators' section: (1) a GPA Calculator that takes course grades and credit hours and outputs a GPA, and (2) a Screen Time Tracker calculator that estimates daily digital wellness based on hours of screen time input. Both calculators must use React state for all computation.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/GPACalculator.tsx",
+          "frontend/src/components/ScreenTimeCalculator.tsx",
+          "frontend/src/components/CalculatorsSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/GPACalculator.tsx",
+          "frontend/src/components/ScreenTimeCalculator.tsx",
+          "frontend/src/components/CalculatorsSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create a 'Free Downloads' section with at least 4 freebie cards (e.g., 'Study Planner PDF', 'Healthy Meal Prep Checklist', 'Daily Habit Tracker', 'Tech Cheat Sheet'). Each card shows a title, description, and a 'Download Free' button. Buttons link to placeholder '#' or a static notice since file hosting is not available.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FreebieCard.tsx",
+          "frontend/src/components/DownloadsSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FreebieCard.tsx",
+          "frontend/src/components/DownloadsSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/category-icons.dim_512x512.png",
+    "frontend/public/assets/generated/freebies-bg.dim_800x400.png",
+    "frontend/public/assets/generated/hero-banner.dim_1400x600.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/CalculatorsSection.tsx",
+    "frontend/src/components/CategoryFilter.tsx",
+    "frontend/src/components/DownloadsSection.tsx",
+    "frontend/src/components/FactCard.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/FreebieCard.tsx",
+    "frontend/src/components/GPACalculator.tsx",
+    "frontend/src/components/GuideCard.tsx",
+    "frontend/src/components/GuidesSection.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/NewUpdatesSection.tsx",
+    "frontend/src/components/PopularPostsSection.tsx",
+    "frontend/src/components/Quiz.tsx",
+    "frontend/src/components/QuizSection.tsx",
+    "frontend/src/components/ScreenTimeCalculator.tsx",
+    "frontend/src/components/ShareButtons.tsx",
+    "frontend/src/components/Top10ListCard.tsx",
+    "frontend/src/components/Top10Section.tsx",
+    "frontend/src/components/TrendingFactsSection.tsx",
+    "frontend/src/components/VideoCard.tsx",
+    "frontend/src/components/VideosSection.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

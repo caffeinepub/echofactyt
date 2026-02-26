@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* EchoFactyt vibrant palette */
+    --background: 0.98 0.005 85;
+    --foreground: 0.18 0.02 260;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 260;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 260;
+
+    --primary: 0.62 0.22 30;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.94 0.04 85;
+    --secondary-foreground: 0.18 0.02 260;
+
+    --muted: 0.94 0.01 85;
+    --muted-foreground: 0.52 0.02 260;
+
+    --accent: 0.72 0.18 165;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.88 0.02 85;
+    --input: 0.88 0.02 85;
+    --ring: 0.62 0.22 30;
+
+    --chart-1: 0.62 0.22 30;
+    --chart-2: 0.72 0.18 165;
+    --chart-3: 0.78 0.19 85;
+    --chart-4: 0.65 0.2 300;
+    --chart-5: 0.68 0.22 200;
+
+    --sidebar: 0.98 0.005 85;
+    --sidebar-foreground: 0.18 0.02 260;
+    --sidebar-primary: 0.62 0.22 30;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.04 85;
+    --sidebar-accent-foreground: 0.18 0.02 260;
+    --sidebar-border: 0.88 0.02 85;
+    --sidebar-ring: 0.62 0.22 30;
+  }
+
+  .dark {
+    --background: 0.14 0.02 260;
+    --foreground: 0.96 0.005 85;
+
+    --card: 0.19 0.02 260;
+    --card-foreground: 0.96 0.005 85;
+
+    --popover: 0.22 0.02 260;
+    --popover-foreground: 0.96 0.005 85;
+
+    --primary: 0.72 0.22 30;
+    --primary-foreground: 0.14 0.02 260;
+
+    --secondary: 0.24 0.02 260;
+    --secondary-foreground: 0.96 0.005 85;
+
+    --muted: 0.24 0.02 260;
+    --muted-foreground: 0.65 0.02 260;
+
+    --accent: 0.62 0.18 165;
+    --accent-foreground: 0.14 0.02 260;
+
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.14 0.02 260;
+
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.72 0.22 30;
+
+    --sidebar: 0.19 0.02 260;
+    --sidebar-foreground: 0.96 0.005 85;
+    --sidebar-primary: 0.72 0.22 30;
+    --sidebar-primary-foreground: 0.14 0.02 260;
+    --sidebar-accent: 0.24 0.02 260;
+    --sidebar-accent-foreground: 0.96 0.005 85;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.72 0.22 30;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, oklch(0.62 0.22 30) 0%, oklch(0.78 0.19 55) 50%, oklch(0.72 0.18 165) 100%);
+  }
+
+  .gradient-card-tech {
+    background: linear-gradient(135deg, oklch(0.72 0.18 220) 0%, oklch(0.62 0.2 240) 100%);
+  }
+
+  .gradient-card-school {
+    background: linear-gradient(135deg, oklch(0.72 0.18 165) 0%, oklch(0.62 0.2 180) 100%);
+  }
+
+  .gradient-card-health {
+    background: linear-gradient(135deg, oklch(0.72 0.2 145) 0%, oklch(0.62 0.22 160) 100%);
+  }
+
+  .gradient-card-entertainment {
+    background: linear-gradient(135deg, oklch(0.72 0.22 300) 0%, oklch(0.62 0.24 320) 100%);
+  }
+
+  .gradient-card-daily {
+    background: linear-gradient(135deg, oklch(0.78 0.19 55) 0%, oklch(0.68 0.22 40) 100%);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+
+  .badge-tech {
+    background-color: oklch(0.92 0.08 220);
+    color: oklch(0.35 0.18 220);
+  }
+
+  .badge-school {
+    background-color: oklch(0.92 0.08 165);
+    color: oklch(0.35 0.18 165);
+  }
+
+  .badge-health {
+    background-color: oklch(0.92 0.08 145);
+    color: oklch(0.35 0.18 145);
+  }
+
+  .badge-entertainment {
+    background-color: oklch(0.92 0.08 300);
+    color: oklch(0.35 0.18 300);
+  }
+
+  .badge-daily {
+    background-color: oklch(0.95 0.1 55);
+    color: oklch(0.42 0.18 40);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, oklch(0.62 0.22 30), oklch(0.68 0.22 40));
+    @apply text-white font-bold px-6 py-3 rounded-full transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    background: linear-gradient(135deg, oklch(0.72 0.18 165), oklch(0.62 0.2 180));
+    @apply text-white font-bold px-6 py-3 rounded-full transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 font-bold px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg active:scale-95;
+    border-color: oklch(0.62 0.22 30);
+    color: oklch(0.62 0.22 30);
+  }
+
+  .btn-outline:hover {
+    background-color: oklch(0.62 0.22 30);
+    color: white;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-extrabold mb-2;
+    font-family: 'Poppins', sans-serif;
+    color: oklch(0.18 0.02 260);
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg mb-8;
+    color: oklch(0.52 0.02 260);
+  }
+
+  .new-badge {
+    background: linear-gradient(135deg, oklch(0.62 0.22 30), oklch(0.78 0.19 55));
+    @apply text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide;
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T15:39:17.766Z",
+  "summary": "The diff implements most of the requested requirements. All frontend sections (hero, trending facts, top 10 lists, guides, videos, quiz, calculators, downloads, category filter, share buttons, popular posts, new updates) appear to be present. The Motoko backend implements popular posts with view counts and new updates with timestamps. However, several specific acceptance criteria have gaps or cannot be confirmed from the truncated diff, and one requirement has a notable concern.",
+  "missing_requirements": [
+    {
+      "requirement": "At least 5 seed posts are pre-loaded in the backend",
+      "reason": "The Motoko backend provides addPost() and viewPost() functions, but there is no seed data or init/post-upgrade function that pre-loads at least 5 posts. The posts list starts empty.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "requirement": "Share buttons are visible on quiz results screen",
+      "reason": "The Quiz.tsx file is truncated and the results screen portion is cut off, so it cannot be confirmed that ShareButtons is rendered on the quiz results screen. The component is imported and used in FactCard and GuideCard, but quiz results inclusion is unverifiable.",
+      "evidence": [
+        "frontend/src/components/Quiz.tsx"
+      ]
+    },
+    {
+      "requirement": "At least 4 YouTube iframes are embedded and playable with real YouTube embed URLs",
+      "reason": "The VideosSection component is listed as one of the omitted files due to diff limits, so its implementation cannot be verified.",
+      "evidence": []
+    },
+    {
+      "requirement": "At least 6 fact cards visible in a responsive grid spanning all required categories",
+      "reason": "The TrendingFactsSection component is listed among the omitted files and cannot be verified to contain at least 6 fact cards spanning all required categories.",
+      "evidence": []
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "At least 5 seed posts are pre-loaded in the backend and popular posts are fetched sorted by view count",
+      "reason": "The backend addPost() is admin-only with no seeding mechanism, so the popular posts section will show nothing by default. No init or preupgrade function seeds the 5 required posts.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Section updates when new content is added; backend stores content items with creation timestamps",
+      "reason": "The backend addUpdate() function is admin-only requiring AccessControl admin permission. There is no seeding of initial updates, so the New Updates section will be empty by default and the AC requiring the section to update when new content is added cannot be met without admin access.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/NewUpdatesSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Email subscription form / newsletter UI in the footer",
+      "reason": "The BuildRequest does not list a newsletter subscription form as a requirement. The footer includes an email input with a submit button that was not requested.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Stats row in hero section showing 500+ Facts, 50+ Life Hacks, 10+ Quizzes, 100K+ Readers",
+      "reason": "The BuildRequest does not specify a stats or metrics row in the hero section. This was added beyond the spec.",
+      "evidence": [
+        "frontend/src/components/HeroSection.tsx"
+      ]
+    },
+    {
+      "description": "AccessControl and MixinAuthorization admin-gating on backend write operations",
+      "reason": "The BuildRequest does not mention authentication, admin roles, or access control for the backend. The spec explicitly lists user authentication as a non-goal. The backend restricts addPost and addUpdate to admin principals only, which was not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CalculatorsSection.tsx",
+    "frontend/src/components/CategoryFilter.tsx",
+    "frontend/src/components/DownloadsSection.tsx",
+    "frontend/src/components/FactCard.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/FreebieCard.tsx",
+    "frontend/src/components/GPACalculator.tsx",
+    "frontend/src/components/GuideCard.tsx",
+    "frontend/src/components/GuidesSection.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/NewUpdatesSection.tsx",
+    "frontend/src/components/PopularPostsSection.tsx",
+    "frontend/src/components/Quiz.tsx",
+    "frontend/src/components/QuizSection.tsx",
+    "frontend/src/components/ScreenTimeCalculator.tsx",
+    "frontend/src/components/ShareButtons.tsx",
+    "frontend/src/components/Top10ListCard.tsx",
+    "frontend/src/components/Top10Section.tsx",
+    "frontend/src/components/TrendingFactsSection.tsx",
+    "frontend/src/components/VideoCard.tsx",
+    "frontend/src/components/VideosSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

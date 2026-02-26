@@ -1,0 +1,278 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-design-and-apply-a-vibrant-youthful-visual-theme-across-the-entire-site-bold-gradient-accents-e-g-coral-to-yellow-or-teal-to-lime-modern-sans-serif-typography-large-bold-headings-readable-body-text-colorful-category-badges-card-based-layout-smooth-hover-effects-and-fully-responsive-mobile-first-layout-no-blue-purple",
+      "featureTitle": "Design and apply a vibrant, youthful visual theme across the entire site: bold gradient accents (e.g., coral-to-yellow or teal-to-lime), modern sans-serif typography (large bold headings, readable body text), colorful category badges, card-based layout, smooth hover effects, and fully responsive mobile-first layout. No blue/purple.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-full-width-hero-banner-at-the-top-of-the-homepage-with-a-catchy-tagline-e-g-discover-facts-that-actually-matter-a-short-subtitle-and-three-cta-buttons-learn-more-try-now-and-watch-video-the-banner-should-use-a-bold-gradient-background-and-a-generated-hero-illustration",
+      "featureTitle": "Build a full-width hero banner at the top of the homepage with a catchy tagline (e.g., 'Discover Facts That Actually Matter'), a short subtitle, and three CTA buttons: 'Learn More', 'Try Now', and 'Watch Video'. The banner should use a bold gradient background and a generated hero illustration.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-trending-facts-section-displaying-at-least-6-colorful-fact-cards-each-card-shows-a-category-badge-a-short-interesting-fact-2-3-sentences-a-topic-icon-and-a-learn-more-button-facts-should-span-categories-technology-school-health-entertainment-and-daily-life",
+      "featureTitle": "Create a 'Trending Facts' section displaying at least 6 colorful fact cards. Each card shows a category badge, a short interesting fact (2–3 sentences), a topic icon, and a 'Learn More' button. Facts should span categories: technology, school, health, entertainment, and daily life.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FactCard.tsx",
+        "frontend/src/components/TrendingFactsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-top-10-lists-section-with-at-least-3-sample-top-10-lists-e-g-top-10-study-hacks-top-10-free-apps-for-students-top-10-healthy-snacks-each-list-is-shown-as-a-numbered-card-or-accordion-panel-with-a-title-brief-description-and-a-try-now-cta-button",
+      "featureTitle": "Add a 'Top 10 Lists' section with at least 3 sample Top 10 lists (e.g., 'Top 10 Study Hacks', 'Top 10 Free Apps for Students', 'Top 10 Healthy Snacks'). Each list is shown as a numbered card or accordion panel with a title, brief description, and a 'Try Now' CTA button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Top10ListCard.tsx",
+        "frontend/src/components/Top10Section.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-step-by-step-guides-section-with-at-least-3-sample-guides-e-g-how-to-build-a-study-schedule-how-to-stay-healthy-on-a-budget-each-guide-is-displayed-as-a-card-with-a-title-numbered-steps-and-a-learn-more-button",
+      "featureTitle": "Create a 'Step-by-Step Guides' section with at least 3 sample guides (e.g., 'How to Build a Study Schedule', 'How to Stay Healthy on a Budget'). Each guide is displayed as a card with a title, numbered steps, and a 'Learn More' button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GuideCard.tsx",
+        "frontend/src/components/GuidesSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-videos-section-that-embeds-youtube-shorts-and-videos-use-iframe-embeds-with-a-visually-appealing-grid-or-carousel-layout-include-at-least-4-embedded-video-placeholders-using-real-youtube-embed-urls-e-g-popular-echofactyt-style-short-educational-videos-each-video-card-should-have-a-title-and-a-watch-video-button-label",
+      "featureTitle": "Build a 'Videos' section that embeds YouTube Shorts and videos. Use iframe embeds with a visually appealing grid or carousel layout. Include at least 4 embedded video placeholders using real YouTube embed URLs (e.g., popular EchoFactyt-style short educational videos). Each video card should have a title and a 'Watch Video' button/label.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VideoCard.tsx",
+        "frontend/src/components/VideosSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-interactive-quiz-module-with-at-least-one-sample-quiz-e-g-which-study-style-are-you-the-quiz-should-present-multiple-choice-questions-one-at-a-time-track-the-user-s-answers-in-react-state-and-display-a-results-screen-at-the-end-with-a-score-or-personality-result",
+      "featureTitle": "Add an interactive Quiz module with at least one sample quiz (e.g., 'Which Study Style Are You?'). The quiz should present multiple-choice questions one at a time, track the user's answers in React state, and display a results screen at the end with a score or personality result.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Quiz.tsx",
+        "frontend/src/components/QuizSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-at-least-2-interactive-calculators-in-a-calculators-section-1-a-gpa-calculator-that-takes-course-grades-and-credit-hours-and-outputs-a-gpa-and-2-a-screen-time-tracker-calculator-that-estimates-daily-digital-wellness-based-on-hours-of-screen-time-input-both-calculators-must-use-react-state-for-all-computation",
+      "featureTitle": "Include at least 2 interactive calculators in a 'Calculators' section: (1) a GPA Calculator that takes course grades and credit hours and outputs a GPA, and (2) a Screen Time Tracker calculator that estimates daily digital wellness based on hours of screen time input. Both calculators must use React state for all computation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CalculatorsSection.tsx",
+        "frontend/src/components/GPACalculator.tsx",
+        "frontend/src/components/ScreenTimeCalculator.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-free-downloads-section-with-at-least-4-freebie-cards-e-g-study-planner-pdf-healthy-meal-prep-checklist-daily-habit-tracker-tech-cheat-sheet-each-card-shows-a-title-description-and-a-download-free-button-buttons-link-to-placeholder-or-a-static-notice-since-file-hosting-is-not-available",
+      "featureTitle": "Create a 'Free Downloads' section with at least 4 freebie cards (e.g., 'Study Planner PDF', 'Healthy Meal Prep Checklist', 'Daily Habit Tracker', 'Tech Cheat Sheet'). Each card shows a title, description, and a 'Download Free' button. Buttons link to placeholder '#' or a static notice since file hosting is not available.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DownloadsSection.tsx",
+        "frontend/src/components/FreebieCard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-social-media-share-buttons-twitter-x-facebook-whatsapp-and-copy-link-on-each-fact-card-guide-card-and-at-the-bottom-of-the-quiz-results-screen-clicking-twitter-x-and-facebook-should-open-a-pre-filled-share-dialog-using-the-page-url-and-a-short-share-message-whatsapp-should-open-a-whatsapp-com-share-link-copy-link-copies-the-current-url-to-clipboard",
+      "featureTitle": "Add social media share buttons (Twitter/X, Facebook, WhatsApp, and Copy Link) on each fact card, guide card, and at the bottom of the quiz results screen. Clicking Twitter/X and Facebook should open a pre-filled share dialog using the page URL and a short share message. WhatsApp should open a whatsapp.com share link. Copy Link copies the current URL to clipboard.",
+      "files": [
+        "frontend/src/components/FactCard.tsx",
+        "frontend/src/components/GuideCard.tsx",
+        "frontend/src/components/Quiz.tsx",
+        "frontend/src/components/ShareButtons.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-popular-posts-sidebar-or-section-showing-at-least-5-posts-ranked-by-a-view-count-stored-in-the-motoko-backend-each-post-has-a-title-category-and-view-count-clicking-a-post-increments-its-view-count-via-a-backend-call",
+      "featureTitle": "Build a 'Popular Posts' sidebar or section showing at least 5 posts ranked by a view count stored in the Motoko backend. Each post has a title, category, and view count. Clicking a post increments its view count via a backend call.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/PopularPostsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-new-updates-section-on-the-homepage-displaying-the-most-recently-added-facts-or-tips-the-backend-should-store-content-items-with-a-timestamp-the-frontend-fetches-and-displays-the-4-most-recent-items-in-a-highlighted-new-badge-card-layout",
+      "featureTitle": "Add a 'New Updates' section on the homepage displaying the most recently added facts or tips. The backend should store content items with a timestamp. The frontend fetches and displays the 4 most recent items in a highlighted 'New' badge card layout.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/NewUpdatesSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-topic-category-filter-navigation-bar-with-tabs-or-pill-buttons-for-all-technology-school-health-entertainment-daily-life-clicking-a-category-filters-the-trending-facts-guides-and-top-10-lists-sections-to-show-only-items-matching-that-category-filter-state-is-managed-in-react",
+      "featureTitle": "Implement a topic category filter/navigation bar with tabs or pill buttons for: All, Technology, School, Health, Entertainment, Daily Life. Clicking a category filters the Trending Facts, Guides, and Top 10 lists sections to show only items matching that category. Filter state is managed in React.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CategoryFilter.tsx",
+        "frontend/src/components/GuidesSection.tsx",
+        "frontend/src/components/Top10Section.tsx",
+        "frontend/src/components/TrendingFactsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

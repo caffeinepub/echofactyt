@@ -1,0 +1,269 @@
+{
+  "kind": "build_request",
+  "title": "EchoFactyt — Bright, Modern Content Website for Teens & Young Adults",
+  "projectName": "EchoFactyt",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Design and apply a vibrant, youthful visual theme across the entire site: bold gradient accents (e.g., coral-to-yellow or teal-to-lime), modern sans-serif typography (large bold headings, readable body text), colorful category badges, card-based layout, smooth hover effects, and fully responsive mobile-first layout. No blue/purple.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "clean, colorful, fast-loading, SEO-friendly, and easy to navigate, with bold headings, modern fonts, and a well-organized layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site renders cleanly on mobile (320px+), tablet, and desktop",
+        "Consistent color palette and typography used throughout all sections",
+        "All interactive elements have visible hover/focus states"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a full-width hero banner at the top of the homepage with a catchy tagline (e.g., 'Discover Facts That Actually Matter'), a short subtitle, and three CTA buttons: 'Learn More', 'Try Now', and 'Watch Video'. The banner should use a bold gradient background and a generated hero illustration.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "call-to-action buttons like \"Learn More,\" \"Try Now,\" and \"Watch Video\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section is visible on page load with all three CTA buttons",
+        "CTA buttons scroll to or link to relevant sections on the page",
+        "Hero is fully responsive"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a 'Trending Facts' section displaying at least 6 colorful fact cards. Each card shows a category badge, a short interesting fact (2–3 sentences), a topic icon, and a 'Learn More' button. Facts should span categories: technology, school, health, entertainment, and daily life.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "sections for trending facts",
+          "short, interesting facts, life hacks, and useful tips"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 6 fact cards visible in a responsive grid",
+        "Each card has a category badge with distinct color per category",
+        "'Learn More' button is present on every card"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a 'Top 10 Lists' section with at least 3 sample Top 10 lists (e.g., 'Top 10 Study Hacks', 'Top 10 Free Apps for Students', 'Top 10 Healthy Snacks'). Each list is shown as a numbered card or accordion panel with a title, brief description, and a 'Try Now' CTA button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Include Top 10 lists"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 Top 10 lists are displayed",
+        "Each list item is numbered and styled consistently",
+        "'Try Now' button is present on each list card"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a 'Step-by-Step Guides' section with at least 3 sample guides (e.g., 'How to Build a Study Schedule', 'How to Stay Healthy on a Budget'). Each guide is displayed as a card with a title, numbered steps, and a 'Learn More' button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "step-by-step guides"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 guides are shown with numbered step lists",
+        "Guide cards are responsive and readable on mobile",
+        "'Learn More' CTA is present on each guide"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build a 'Videos' section that embeds YouTube Shorts and videos. Use iframe embeds with a visually appealing grid or carousel layout. Include at least 4 embedded video placeholders using real YouTube embed URLs (e.g., popular EchoFactyt-style short educational videos). Each video card should have a title and a 'Watch Video' button/label.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Embed YouTube Shorts and videos from EchoFactyt for each fact or tip, with a visually appealing video section",
+          "'Watch Video'"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 4 YouTube iframes are embedded and playable",
+        "Video section has a distinct visual layout (grid or carousel)",
+        "'Watch Video' label or button is visible on each video card",
+        "Video embeds are responsive and not cropped on mobile"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add an interactive Quiz module with at least one sample quiz (e.g., 'Which Study Style Are You?'). The quiz should present multiple-choice questions one at a time, track the user's answers in React state, and display a results screen at the end with a score or personality result.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "quizzes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Quiz displays at least 5 questions with 3–4 answer choices each",
+        "User can progress through questions and reach a result screen",
+        "Result screen shows a summary or score",
+        "Quiz is fully functional without a backend"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Include at least 2 interactive calculators in a 'Calculators' section: (1) a GPA Calculator that takes course grades and credit hours and outputs a GPA, and (2) a Screen Time Tracker calculator that estimates daily digital wellness based on hours of screen time input. Both calculators must use React state for all computation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "calculators"
+        ]
+      },
+      "acceptanceCriteria": [
+        "GPA calculator accepts at least 3 course inputs and displays calculated GPA",
+        "Screen time calculator accepts hours input and shows a wellness assessment",
+        "Both calculators show results immediately on input change or button click"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a 'Free Downloads' section with at least 4 freebie cards (e.g., 'Study Planner PDF', 'Healthy Meal Prep Checklist', 'Daily Habit Tracker', 'Tech Cheat Sheet'). Each card shows a title, description, and a 'Download Free' button. Buttons link to placeholder '#' or a static notice since file hosting is not available.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "downloadable freebies to engage visitors"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 4 freebie cards are displayed in a grid",
+        "Each card has title, description, and a download button",
+        "Cards are visually distinct and appealing"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add social media share buttons (Twitter/X, Facebook, WhatsApp, and Copy Link) on each fact card, guide card, and at the bottom of the quiz results screen. Clicking Twitter/X and Facebook should open a pre-filled share dialog using the page URL and a short share message. WhatsApp should open a whatsapp.com share link. Copy Link copies the current URL to clipboard.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Add social media share buttons to encourage sharing and increase traffic"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Share buttons are visible on fact cards, guide cards, and quiz results",
+        "Twitter/X and Facebook buttons open share URLs in a new tab",
+        "WhatsApp button opens a WhatsApp share link",
+        "Copy Link button copies the URL and shows a brief 'Copied!' confirmation"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Build a 'Popular Posts' sidebar or section showing at least 5 posts ranked by a view count stored in the Motoko backend. Each post has a title, category, and view count. Clicking a post increments its view count via a backend call.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "most popular posts"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Popular posts are fetched from the backend and displayed sorted by view count",
+        "Clicking a post increments its view count and re-renders the updated count",
+        "At least 5 seed posts are pre-loaded in the backend"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add a 'New Updates' section on the homepage displaying the most recently added facts or tips. The backend should store content items with a timestamp. The frontend fetches and displays the 4 most recent items in a highlighted 'New' badge card layout.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "new updates"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores content items with creation timestamps",
+        "Frontend displays the 4 most recent items with a 'New' badge",
+        "Section updates when new content is added"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Implement a topic category filter/navigation bar with tabs or pill buttons for: All, Technology, School, Health, Entertainment, Daily Life. Clicking a category filters the Trending Facts, Guides, and Top 10 lists sections to show only items matching that category. Filter state is managed in React.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "covering topics like technology, school, health, entertainment, and daily life"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Category filter bar is visible and sticky or near the top of content sections",
+        "Selecting a category filters displayed cards correctly",
+        "'All' tab shows all content",
+        "Active category tab is visually highlighted"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not implement actual email sending — email subscription form UI only",
+    "All calculators and quiz logic must run entirely in React state (no backend)",
+    "YouTube video embeds must use standard iframe embed URLs (no custom video hosting)",
+    "Social share buttons must use standard web share URLs, not authenticated APIs"
+  ],
+  "nonGoals": [
+    "User authentication or login system",
+    "Actual file hosting or PDF generation for downloads",
+    "Real-time features or WebSocket connections",
+    "CMS or admin dashboard for content management",
+    "Payment or monetization features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Vibrant hero illustration with colorful abstract shapes, lightning bolt, lightbulb, and stars on a coral-to-yellow gradient background, suitable for a youth facts website (hero-banner.dim_1400x600.png)",
+      "Fun flat-style icons set: small icons for technology (chip), school (book), health (heart), entertainment (star), daily life (sun) on transparent backgrounds (category-icons.dim_512x512.png)",
+      "Bright decorative freebie download card background with confetti and ribbon elements (freebies-bg.dim_800x400.png)"
+    ],
+    "edits": []
+  }
+}
